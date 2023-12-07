@@ -22,4 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get(uri: 'travels', action: [TravelController::class, 'index']);
-Route::get(uri: 'travels/{travel}/tours', [TourController::class, 'index']);
+Route::get('travels/{travel}/tours', [TourController::class, 'index'])->name('tours.index');
